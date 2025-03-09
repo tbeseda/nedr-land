@@ -1,68 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nedr.land</title>
-    <style>
-        @font-face {
-            font-family: 'Spagetty';
-            src: url('https://tbeseda.s3.us-east-1.amazonaws.com/Spagetty-Rough.woff2') format('woff2');
-            font-display: swap;
-            font-weight: normal;
-            font-style: normal;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nedr.land</title>
+  <style>
+    @font-face {
+      font-family: 'Spagetty';
+      src: url('https://tbeseda.s3.us-east-1.amazonaws.com/Spagetty-Rough.woff2') format('woff2');
+      font-display: swap;
+      font-weight: normal;
+      font-style: normal;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff;
-            padding: 1rem;
-        }
+    body {
+      font-family: -apple-system, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      background: #fff;
+      padding: 1rem;
+    }
 
-        main {
-            text-align: center;
-            max-width: 600px;
-            width: 100%;
-        }
+    main {
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
 
-        h1 {
-            font-family: 'Spagetty', sans-serif;
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            color: #000;
-            letter-spacing: -1px;
-        }
+    h1 {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 2px;
+      line-height: 1;
+      font-family: 'Spagetty', sans-serif;
+      font-size: 4rem;
+      letter-spacing: -1px;
+    }
 
-        p {
-            color: #4a5568;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
+    .pin {
+      transform: translateY(-0.15em);
+      display: flex;
+      align-items: flex-end;
+      color: #d52e0d;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
 
-        .dot {
-            color: #d52e0d;
-        }
+    .pin:hover {
+      transform: scale(1.2) translateY(-0.2em);
+    }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 3rem;
-            }
-        }
-    </style>
+    .pin svg {
+      width: 0.5em;
+      height: 0.5em;
+      fill: currentColor;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <main>
-        <h1>nedr<span class="dot">.</span>land</h1>
-    </main>
+  <main>
+    <h1>
+      <span>nedr</span>
+      <a href="https://en.wikipedia.org/wiki/Nederland,_Colorado" class="pin"
+        target="_blank" rel="noopener noreferrer" title="Nederland, Colorado">
+          <svg viewBox="0 0 24 24">
+            <!-- <path d="M12 0a8 8 0 0 0-8 8c0 5.4 8 16 8 16s8-10.6 8-16a8 8 0 0 0-8-8z" /> -->
+            <!-- hollow pin: -->
+            <path d="M12 0C7.6 0 4 3.6 4 8c0 5.4 8 16 8 16s8-10.6 8-16c0-4.4-3.6-8-8-8zm0 12c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/>
+          </svg>
+      </a>
+      <span>land</span>
+    </h1>
+  </main>
 </body>
+
 </html>
